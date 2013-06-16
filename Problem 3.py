@@ -16,5 +16,18 @@ def prime_sieve(ceiling):
 		primes.append(i)
 	return primes
 
-print prime_sieve(600851475143)
-#Buffer overflow
+# print prime_sieve(600851475143)
+# Buffer overflow
+
+#print prime_sieve(420000)
+# decently fast
+
+def prob3(n, potential_factors):
+    for e in range(0, len(potential_factors)):
+        if n % potential_factors[-1 - e] == 0:
+            return potential_factors[-1 - e]
+    return -1
+
+print prob3(600851475143, prime_sieve(4200000))
+
+
