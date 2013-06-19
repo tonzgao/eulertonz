@@ -17,59 +17,51 @@ We can see that 28 is the first triangle number to have over five divisors.
 
 What is the value of the first triangle number to have over five hundred divisors?
 """
-import timeit
+import runtime
 
-def divisors(n):
-    divisors = set([])
-    cap = n
-    i = 1
-    while i <= cap:
-        if n % i == 0:
-            divisors.add(i)
-            divisors.add(n/i)
+def prime_sieve(ceiling):
+    not_prime = set()
+    primes = []
+    tceiling = ceiling + 1
+    for i in range(2, tceiling):
+        if i in not_prime:
+            continue
+        for j in range(i*2, tceiling, i):
+            not_prime.add(j)
+        primes.append(i)
+    return primes
+
+# def divisors(n):
+#     divisors = set([])
+#     cap = n
+#     i = 1
+#     while i <= cap:
+#         if n % i == 0:
+#             divisors.add(i)
+#             divisors.add(n/i)
+#         i += 1
+#         cap = n/i + 1
+#     return divisors
+
+def triangles(start, end=None):
+    triangle = sum(range(start))
+    i = start
+    while triangle < end or end == None:
+        triangle = triangle + i
+        yield triangle
         i += 1
-        cap = n/i + 1
-    return divisors
 
-def triangles2(ceil):
-    triangles = [1]
-    i = 1
-    while 1:
-        new = triangles[-1] + i+1
-        triangles.append(new)
-        if new >= ceil:
-            return triangles
-        i += 1
+def prob12(start):
+    primes = prime_sieve(999999)
+    t = triangles(start)
+    triangle = t.next()
+    print triangle
+    while 1 <= 500:
+        triangle = t.next()
+        print triangle
+    return triangle
 
-def prob12(a):
-    triangles = triangles2(a)
-    if len(a) < 501:
-        return len(a)
-    for n in triangles[-1:-100:-1]:
-        a = divisors(n)
-        if len(a) >= 501:
-            print n, len(a)
-        if len(a) == 501:
-            return divisors(n)
 
-def fac(n):
-    if n <= 1:
-        return 1
-    return n*fac(n-1)
-
-def facs(ceil):
-    facs = set([1])
-    for i in range(1, 100):
-        new = fac(i)
-        facs.add(new)
-        if new >= ceil:
-            return facs
-
-def test():
-    triangles = triangles2(1000)
-    for n in triangles:
-        print len(divisors(n)), n
-
-print test()
+prob12(100)
 
 
