@@ -37,6 +37,7 @@ primes = prime_sieve(500000)
 def divisors(n):
     stack = []
     done = set([])
+    divs = []
     cap = n/2 + 1
     factors = 2
     for p in primes:
@@ -54,37 +55,30 @@ def divisors(n):
                     continue
                 else:
                     factors += 2
+                    divs.append(new)
+                    divs.append(n/new)
+                    stack.append((tup[0], tup[1]+1))
                     stack.append((new, 0))
                 if n/new <= cap:
                     cap = n/new
         done.add(p)
         if p >= cap:
-            if int(math.sqrt(n) == int(math.sqrt(n))):
+            if int(math.sqrt(n)) == math.sqrt(n):
+                stack.append((tup[0], tup[1]+1))
                 factors -= 1
-            return factors
+            return factors, divs
         elif n%p != 0:
             continue
         else:
             factors += 2
+            divs.append(p)
+            divs.append(n/p)
             stack.append((p, 0))
-        if n%p <= cap:
-            cap = n/p
+            if n/p <= cap:
+                cap = n/p
 
 def tupmult((a, b)):
     return a*primes[b]
-
-
-# def divisors(n):
-#     divisors = set([])
-#     cap = n
-#     i = 1
-#     while i <= cap:
-#         if n % i == 0:
-#             divisors.add(i)
-#             divisors.add(n/i)
-#         i += 1
-#         cap = n/i + 1
-#     return divisors
 
 def triangles(start, end=None):
     triangle = sum(range(start))
@@ -94,17 +88,21 @@ def triangles(start, end=None):
         yield triangle
         i += 1
 
-
-
 def prob12(start):
-    t = triangles(start, 99991*99989)
+    t = triangles(start, 99989)
     triangle = t.next()
-    divs = divisors(triangle)
-    print triangle, divs
+    (divs, factors) = divisors(triangle)
+    big, biggie = 0, 0
+    print triangle, divs, factors
     while divs <= 500:
-        triangle = t.next()
-        divs = divisors(triangle)
-        print triangle, divs
+        try:
+            triangle = t.next()
+        except:
+            return big, biggie, start
+        (divs, factors) = divisors(triangle)
+        if divs > big:
+            big, biggie = divs, triangle
+        print triangle, divs, factors
     return triangle
 
 print prob12(100)

@@ -32,59 +32,68 @@ def prime_sieve(ceiling):
         primes.append(i)
     return primes
 
-primes = prime_sieve(100000)
-stack = []
-done = set()
+primes = prime_sieve(500000)
 
 def divisors(n):
+    stack = []
+    primefacs = []
+    done = set([])
+    divs = []
     cap = n/2 + 1
     factors = 2
     for p in primes:
-        while stack:
-            tup = stack.pop()
-            new = tupmult(tup)
-            if new in done:
-                continue
-            else:
-                done.add(new)
-                if new >= cap:
-                    continue
-                elif n%new != 0:
-                    stack.append((tup[0], tup[1]+1))
-                    continue
-                else:
-                    factors += 2
-                    stack.append((new, 0))
-                if n/new <= cap:
-                    cap = n/new
-        done.add(p)
         if p >= cap:
-            if int(math.sqrt(n) == int(math.sqrt(n))):
-                factors -= 1
-            return factors
+            break
         elif n%p != 0:
             continue
         else:
             factors += 2
+            primefacs.append(p)
+            divs.append(p)
+            divs.append(n/p)
+            print 'divs', divs
             stack.append((p, 0))
-        if n%p <= cap:
-            cap = n/p
+            print ''
+            print 'stack', stack
+            print 'done', done
+            if n/p <= cap:
+                cap = n/p
+                print 'cap', cap
+    print 'PRIMEFACS', primefacs
+    while stack:
+        print ''
+        print 'stack', stack
+        print 'done', done
+        tup = stack.pop()
+        new = tupmult(tup, primefacs)
+        if new in done:
+            continue
+        else:
+            done.add(new)
+            if new >= cap:
+                continue
+            elif n%new != 0:
+                if tup[1] < len(primefacs)-1:
+                    stack.append((tup[0], tup[1]+1))
+                continue
+            else:
+                factors += 2
+                divs.append(new)
+                divs.append(n/new)
+                print 'divs', divs
+            if tup[1] < len(primefacs)-1:
+                stack.append((tup[0], tup[1]+1))
+            stack.append((new, 0))
+            if n/new <= cap:
+                cap = n/new
+                print 'cap', cap
+        if int(math.sqrt(n)) == math.sqrt(n):
+            stack.append((tup[0], tup[1]+1))
+            factors -= 1
+    return factors, divs
 
-def tupmult((a, b)):
-    return a*primes[b]
-
-
-# def divisors(n):
-#     divisors = set([])
-#     cap = n
-#     i = 1
-#     while i <= cap:
-#         if n % i == 0:
-#             divisors.add(i)
-#             divisors.add(n/i)
-#         i += 1
-#         cap = n/i + 1
-#     return divisors
+def tupmult((a, b), primefacs):
+    return a*primefacs[b]
 
 def triangles(start, end=None):
     triangle = sum(range(start))
@@ -94,21 +103,11 @@ def triangles(start, end=None):
         yield triangle
         i += 1
 
-def clear():
-    return [], set([])
+n = 73920
+result = divisors(n)
+print n, '\n', result
+reald = set([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16, 20, 21, 22, 24, 28, 30, 32, 33, 35, 40, 42, 44, 48, 55, 56, 60, 64, 66, 70, 77, 80, 84, 88, 96, 105, 110, 112, 120, 132, 140, 154, 160, 165, 168, 176, 192, 210, 220, 224, 231, 240, 264, 280, 308, 320, 330, 336, 352, 385, 420, 440, 448, 462, 480, 528, 560, 616, 660, 672, 704, 770, 840, 880, 924, 960, 1056, 1120, 1155, 1232, 1320, 1344, 1540, 1680, 1760, 1848, 2112, 2240, 2310, 2464, 2640, 3080, 3360, 3520, 3696, 4620, 4928, 5280, 6160, 6720, 7392, 9240, 10560, 12320, 14784, 18480, 24640, 36960, 73920])
+print (len(list(reald)), reald)
+print reald.difference(set(result[1]))
 
-def prob12(start):
-    t = triangles(start, 99991*99989)
-    triangle = t.next()
-    divs = divisors(triangle)
-    print triangle, divs
-    stack, done = clear()
-    while divs <= 500:
-        triangle = t.next()
-        divs = divisors(triangle)
-        print triangle, divs
-        stack, done = clear()
-    return triangle
-
-print prob12(1000)
 
