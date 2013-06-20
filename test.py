@@ -32,11 +32,11 @@ def prime_sieve(ceiling):
         primes.append(i)
     return primes
 
-primes = prime_sieve(500000)
+primes = prime_sieve(100000)
+stack = []
+done = set()
 
 def divisors(n):
-    stack = []
-    done = set([])
     cap = n/2 + 1
     factors = 2
     for p in primes:
@@ -94,18 +94,21 @@ def triangles(start, end=None):
         yield triangle
         i += 1
 
-
+def clear():
+    return [], set([])
 
 def prob12(start):
     t = triangles(start, 99991*99989)
     triangle = t.next()
     divs = divisors(triangle)
     print triangle, divs
+    stack, done = clear()
     while divs <= 500:
         triangle = t.next()
         divs = divisors(triangle)
         print triangle, divs
+        stack, done = clear()
     return triangle
 
-print prob12(100)
+print prob12(1000)
 
