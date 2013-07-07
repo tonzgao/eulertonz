@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="540ab170-7c19-47e0-8b0a-572591d35c85" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problem 14.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problem 17.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problem 12.py" afterPath="$PROJECT_DIR$/Problem 12.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ProjectEuler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,7 +15,7 @@
     <file path="/Python Console" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1360452657650" ignored="false" />
     <file path="/Problem 8.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371243751177" ignored="false" />
     <file path="/Problem 4.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371344569630" ignored="false" />
-    <file path="/Dummy.txt" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371671765508" ignored="false" />
+    <file path="/Dummy.txt" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1373212208297" ignored="false" />
     <file path="/Problem 10.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371345738448" ignored="false" />
     <file path="/Problem 9.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371346223086" ignored="false" />
     <file path="/Problem 16.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371346457421" ignored="false" />
@@ -23,9 +26,11 @@
     <file path="/Problem 6.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371428840170" ignored="false" />
     <file path="/Problem 7.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371428990652" ignored="false" />
     <file path="/Problem 11.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371440187152" ignored="false" />
-    <file path="/Problem 12.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371737176761" ignored="false" />
+    <file path="/Problem 12.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371997409677" ignored="false" />
     <file path="/runtime.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371674860409" ignored="false" />
-    <file path="/test.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371763009965" ignored="false" />
+    <file path="/test.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1373220262279" ignored="false" />
+    <file path="/Problem 17.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371948328926" ignored="false" />
+    <file path="/Problem 14.py" changelist="540ab170-7c19-47e0-8b0a-572591d35c85" time="1371948374384" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +47,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Problem 12.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Problem 12.py">
+      <file leaf-file-name="Problem 17.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Problem 17.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="21" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#560#574#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="2532" selection-end="2532" vertical-scroll-proportion="0.66795367">
+            <state line="10" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.51829267">
               <folding />
             </state>
           </provider>
@@ -67,6 +61,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="19" selection-start="0" selection-end="2164" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Problem 8.py" />
-        <option value="$PROJECT_DIR$/Problem 4.py" />
         <option value="$PROJECT_DIR$/Problem 3.py" />
         <option value="$PROJECT_DIR$/Problem 10.py" />
         <option value="$PROJECT_DIR$/Problem 9.py" />
@@ -103,8 +106,10 @@
         <option value="$PROJECT_DIR$/Problem 7.py" />
         <option value="$PROJECT_DIR$/Problem 11.py" />
         <option value="$PROJECT_DIR$/runtime.py" />
-        <option value="$PROJECT_DIR$/Problem 12.py" />
+        <option value="$PROJECT_DIR$/Problem 14.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Problem 12.py" />
+        <option value="$PROJECT_DIR$/Problem 17.py" />
       </list>
     </option>
   </component>
@@ -458,15 +463,15 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924012" sideWeight="0.6717687" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13030303" sideWeight="0.50680274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13863637" sideWeight="0.6241497" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39795917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4931973" sideWeight="0.9984871" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37585035" sideWeight="0.9984871" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -538,16 +543,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Problem 13.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="5315" selection-end="5315" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problem 1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="369" selection-end="369" vertical-scroll-proportion="0.6910569" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Problem 2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="13" selection-start="579" selection-end="579" vertical-scroll-proportion="0.9078591" />
@@ -583,6 +578,31 @@
         <state line="194" column="0" selection-start="7260" selection-end="7260" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Problem 7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="146" selection-end="431" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem 5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem 4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem 20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="14" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem 14.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runtime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
@@ -590,46 +610,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem 7.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="146" selection-end="431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problem 5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problem 4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problem 20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="70" column="19" selection-start="0" selection-end="2164" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem 12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0">
+        <state line="94" column="0" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#560#574#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/Problem 17.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="2532" selection-end="2532" vertical-scroll-proportion="0.66795367">
+        <state line="10" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.51829267">
           <folding />
         </state>
       </provider>
